@@ -1,0 +1,44 @@
+{{!< default}}
+
+<header>
+    <h1>{{@blog.title}}</h1>
+    <h2>{{@blog.description}}</h2>
+</header>
+
+{{#author}}
+    <section>
+        {{#if image}}
+            <figure>
+                <a href="{{url}}">
+                    <img src="{{image}}" alt="{{name}}'s Picture" title="{{name}}'s Picture">
+                </a>
+            </figure>
+        {{/if}}
+
+        <div>
+            <h4><a href="{{url}}">{{name}}</a></h4>
+
+            {{#if bio}}
+                <p>{{bio}}</p>
+            {{/if}}
+
+            <div>
+                {{#if location}}
+                    <span>{{location}}</span>
+                {{/if}}
+
+                {{#if website}}
+                    <span><a href="{{website}}">{{website}}</a></span>
+                {{/if}}
+            </div>
+
+            <div>
+                {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
+            </div>
+        </div>
+    </section>
+{{/author}}
+
+<main role="main">
+    {{> "loop"}}
+</main>

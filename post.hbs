@@ -1,0 +1,73 @@
+{{!< default}}
+
+{{#post}}
+    <header {{#if image}}style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+        <h1>{{title}}</h1>
+
+        <section>
+            <time datetime="{{date format="YYYY-MM-DD"}}">
+                {{date format="DD MMMM YYYY"}}
+            </time>
+            {{tags prefix=" in "}}
+        </section>
+    </header>
+
+    <main role="main">
+        <article class="{{post_class}}">
+            <section>
+                {{content}}
+            </section>
+
+            <footer>
+                {{#author}}
+                    {{#if image}}
+                        <figure>
+                            <a href="{{url}}">
+                                <img src="{{image}}" alt="{{name}}'s Picture" title="{{name}}'s Picture">
+                            </a>
+                        </figure>
+                    {{/if}}
+
+                    <section class="author">
+                        <h4><a href="{{url}}">{{name}}</a></h4>
+
+                        {{#if bio}}
+                            <p>{{bio}}</p>
+                        {{/if}}
+
+                        <div>
+                            {{#if location}}
+                                <span>{{location}}</span>
+                            {{/if}}
+
+                            {{#if website}}
+                                <span><a href="{{website}}">{{website}}</a></span>
+                            {{/if}}
+                        </div>
+                    </section>
+                {{/author}}
+            </footer>
+        </article>
+    </main>
+
+    {{!-- Links to Previous/Next posts --}}
+    <aside>
+        {{#next_post}}
+            <a {{#if image}}style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+                <section>
+                    <h2>{{title}}</h2>
+                    <p>{{excerpt words="19"}}&hellip;</p>
+                </section>
+            </a>
+        {{/next_post}}
+
+        {{#prev_post}}
+            <a {{#if image}}style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+                <section>
+                    <h2>{{title}}</h2>
+                    <p>{{excerpt words="19"}}&hellip;</p>
+                </section>
+            </a>
+        {{/prev_post}}
+    </aside>
+{{/post}}
