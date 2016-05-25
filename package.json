@@ -1,17 +1,17 @@
 {
-  "name": "ghost-reader",
+  "name": "GhostReader",
   "version": "0.1.0",
   "description": "Ghost theme designed to be unobtrusive, spacious, and easy on the eyes.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SeerUK/ghost-reader.git"
+    "url": "git+https://github.com/SeerUK/GhostReader.git"
   },
   "author": "Elliot Wright <elliot@elliotwright.co>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SeerUK/ghost-reader/issues"
+    "url": "https://github.com/SeerUK/GhostReader/issues"
   },
-  "homepage": "https://github.com/SeerUK/ghost-reader#readme",
+  "homepage": "https://github.com/SeerUK/GhostReader#readme",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
