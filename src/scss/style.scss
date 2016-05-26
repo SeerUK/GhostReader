@@ -1,3 +1,10 @@
 @import "../../node_modules/normalize.css/normalize";
 @import "../../node_modules/bourbon/app/assets/stylesheets/bourbon";
 @import "../../node_modules/bourbon-neat/app/assets/stylesheets/neat";
+
+@import "abstract/grid";
+@import "abstract/variables";
+
+@import "universal/typography";
+
+@import "component/gr-footer";

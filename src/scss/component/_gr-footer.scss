@@ -1,0 +1,84 @@
+.gr-footer {
+    background: $color-secondary-background;
+
+    hr {
+        background-color: $color-primary-outline;
+        border: none;
+        color: $color-primary-outline;
+        height: 1px;
+        margin: 0;
+    }
+
+    &__brand {
+        @include outer-container();
+
+        font-weight: $font-weight-normal;
+        padding: $bm-l 0;
+
+        @include media($tablet) {
+            padding: 0;
+        }
+    }
+
+    &__brand-logo,
+    &__brand-nav,
+    &__brand-social {
+        padding: $bm-l;
+        text-align: center;
+
+        @include media($tablet) {
+            @include span-columns(4);
+
+            padding: $bm-xxxl;
+        }
+
+        @include media($desktop) {
+            padding: $bm-xxxl 0;
+        }
+    }
+
+    &__brand-logo {
+        img {
+            height: 4rem;
+        }
+
+        @include media($tablet) {
+            padding: $bm-xl;
+            text-align: left;
+        }
+    }
+
+    &__brand-nav {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            display: inline-block;
+            padding: 0 $bm-m;
+        }
+    }
+
+    &__brand-social {
+        @include media($tablet) {
+            text-align: right;
+        }
+    }
+
+    &__copyright {
+        @include outer-container();
+
+        color: $color-secondary-foreground;
+        font-style: italic;
+        padding: $bm-xxl;
+        text-align: center;
+
+        strong {
+            color: $color-primary-foreground;
+            font-style: normal;
+            text-transform: uppercase;
+        }
+    }
+}

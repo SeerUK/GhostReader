@@ -1,0 +1,24 @@
+// Colour Palette
+$color-brand-foreground: #F26F5A;
+$color-primary-foreground: #424242;
+$color-primary-background: #FFFFFF;
+$color-primary-outline: #E0E0E0;
+$color-secondary-foreground: lighten($color-primary-foreground, 33%);
+$color-secondary-background: #F2F2F2;
+
+// Font Settings
+$font-family-primary: "Roboto", sans-serif;
+$font-size-primary: 16px;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-heavy: 700;
+
+// Box Model Sizing
+$bm-xxs: 0.125rem;
+$bm-xs: 0.25rem;
+$bm-s: 0.5rem;
+$bm-m: 0.75rem;
+$bm-l: 1rem;
+$bm-xl: 1.5rem;
+$bm-xxl: 2rem;
+$bm-xxxl: 3rem;
