@@ -4,7 +4,7 @@ var bourbon = require("bourbon").includePaths;
 var neat = require("bourbon-neat").includePaths;
 var gulp = require("gulp");
 var autoprefixer = require("gulp-autoprefixer");
-var cssnano = require("gulp-cssnano");
+var cssmin = require("gulp-clean-css");
 var plumber = require("gulp-plumber");
 var sass = require("gulp-sass");
 var sourcemaps = require("gulp-sourcemaps");
@@ -31,7 +31,7 @@ gulp.task("scss", function() {
             browsers: ["last 2 versions"],
             cascade: false
         }))
-        .pipe(cssnano())
+        .pipe(cssmin())
         .pipe(sourcemaps.write("./"))
         .pipe(gulp.dest(paths.dst.css));
 });
