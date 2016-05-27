@@ -12,7 +12,7 @@
     <title>{{meta_title}}</title>
 
     <link rel="stylesheet" href="{{asset "css/style.css"}}">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,700italic,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
     {{ghost_head}}
 </head>
@@ -33,16 +33,19 @@
                 </a>
             </div>
             <div class="gr-footer__brand-nav">
+                <div class="gr-footer__brand-nav-header">Navigation</div>
                 {{navigation}}
             </div>
             <div class="gr-footer__brand-social">
-                Social
+                Follow Us
             </div>
         </section>
         <hr>
         <section class="gr-footer__copyright">
-            <strong>&copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>.</strong><br>
-            Proudly published with <a href="https://ghost.org">Ghost</a>
+            &copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>.
+            <span class="gr-footer__poweredby">
+                Proudly published with <a href="https://ghost.org">Ghost</a>
+            </span>
         </section>
     </footer>
 

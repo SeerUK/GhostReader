@@ -1,5 +1,6 @@
 .gr-footer {
     background: $color-secondary-background;
+    text-transform: uppercase;
 
     hr {
         background-color: $color-primary-outline;
@@ -12,7 +13,6 @@
     &__brand {
         @include outer-container();
 
-        font-weight: $font-weight-normal;
         padding: $bm-l 0;
 
         @include media($tablet) {
@@ -43,12 +43,13 @@
         }
 
         @include media($tablet) {
-            padding: $bm-xl;
             text-align: left;
         }
     }
 
     &__brand-nav {
+        text-align: left;
+
         ul {
             margin: 0;
             padding: 0;
@@ -56,9 +57,24 @@
         }
 
         li {
-            display: inline-block;
-            padding: 0 $bm-m;
+            color: $color-secondary-foreground;
+            display: block;
+            font-size: 0.75rem;
+
+            a {
+                color: inherit;
+
+                &:active,
+                &:focus,
+                &:hover {
+                    color: $color-brand-foreground;
+                }
+            }
         }
+    }
+
+    &__brand-nav-header {
+        margin-bottom: $bm-m;
     }
 
     &__brand-social {
@@ -71,14 +87,26 @@
         @include outer-container();
 
         color: $color-secondary-foreground;
-        font-style: italic;
+        font-size: 0.75rem;
         padding: $bm-xxl;
         text-align: center;
 
-        strong {
-            color: $color-primary-foreground;
-            font-style: normal;
-            text-transform: uppercase;
+        a {
+            color: inherit;
+
+            &:active,
+            &:focus,
+            &:hover {
+                color: $color-brand-foreground;
+            }
+        }
+    }
+
+    &__poweredby {
+        display: block;
+
+        @include media($tablet) {
+            display: inline;
         }
     }
 }
