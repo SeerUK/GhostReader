@@ -33,11 +33,27 @@
                 </a>
             </div>
             <div class="gr-footer__brand-nav">
-                <div class="gr-footer__brand-nav-header">Navigation</div>
+                <div class="gr-footer__brand-header">Navigation</div>
                 {{navigation}}
             </div>
             <div class="gr-footer__brand-social">
-                Follow Us
+                <div class="gr-footer__brand-header">Follow Us</div>
+                <ul class="gr-footer__brand-social-list">
+                    {{#if @blog.facebook}}
+                        <li class="gr-footer__brand-social-list-item">
+                            <a href="https://www.facebook.com/{{@blog.facebook}}">
+                                <img src="{{asset "assets/img/social/facebook.svg"}}" alt="Facebook">
+                            </a>
+                        </li>
+                    {{/if}}
+                    {{#if @blog.twitter}}
+                        <li class="gr-footer__brand-social-list-item">
+                            <a href="https://www.twitter.com/{{@blog.twitter}}">
+                                <img src="{{asset "assets/img/social/twitter.svg"}}" alt="Twitter">
+                            </a>
+                        </li>
+                    {{/if}}
+                </ul>
             </div>
         </section>
         <hr>

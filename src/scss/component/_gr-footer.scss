@@ -77,13 +77,28 @@
         }
     }
 
-    &__brand-nav-header {
+    &__brand-header {
         margin-bottom: $bm-m;
     }
 
     &__brand-social {
         @include media($tablet) {
             text-align: right;
+        }
+    }
+
+    &__brand-social-list {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__brand-social-list-item {
+        display: inline-block;
+        list-style: none;
+
+        img {
+            height: 2rem;
+            width: auto;
         }
     }
 
