@@ -8,6 +8,14 @@
         padding: ($bm-xxxl * 4) 0 ($bm-xxxl * 2);
     }
 
+    &--fs {
+        padding: ($bm-xxxl * 3) 0;
+
+        @include media($tablet) {
+            padding: ($bm-xxxl * 4) 0;
+        }
+    }
+
     a {
         color: inherit;
     }

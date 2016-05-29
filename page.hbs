@@ -8,7 +8,12 @@
         </a>
     </nav>
 
-    <header class="gr-hero">
+    <header class="gr-hero {{#if image}} gr-hero--fs gr-hero--cover{{/if}}">
+        {{#if image}}
+            <div class="gr-hero__cover" style="background-image: url({{image}})"></div>
+            <div class="gr-hero__overlay"></div>
+        {{/if}}
+
         <section class="gr-hero__page">
             <h1 class="gr-hero__title">{{title}}</h1>
         </section>
