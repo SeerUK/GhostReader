@@ -11,8 +11,22 @@ a {
     text-decoration: none;
 
     &:active,
-    &:focus,
     &:hover {
         color: $color-brand-foreground;
     }
+}
+
+pre,
+code {
+    font-family: $font-family-mono;
+    font-size: 0.875rem;
+    line-height: 1.2;
+}
+
+pre {
+    background: $smoke-light;
+    border-radius: 5px;
+    border: 1px solid $color-primary-outline;
+    overflow-x: auto;
+    padding: $bm-l;
 }

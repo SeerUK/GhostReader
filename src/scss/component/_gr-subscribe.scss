@@ -1,0 +1,74 @@
+.gr-subscribe {
+    color: white;
+    background-size: cover;
+    padding: 2.5rem;
+    text-align: center;
+
+    @include media($tablet) {
+        padding: $bm-xxxxl;
+    }
+
+    &__title {
+        font-weight: normal;
+        font-size: 1.5rem;
+        margin: 0 0 $bm-l;
+    }
+
+    &__form {
+        @include outer-container();
+
+        form {
+            @include media($tablet) {
+                @include shift(2);
+                @include span-columns(8);
+            }
+        }
+    }
+
+    input[type=email] {
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+        color: white;
+        outline: none;
+        padding: $bm-l;
+        width: 100%;
+
+        @include media($tablet) {
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            float: left;
+        }
+    }
+
+    button[type=submit],
+    input[type=submit] {
+        background: $color-brand-foreground;
+        border: 2px solid $color-brand-foreground;
+        border-radius: 5px;
+        color: white;
+        margin-top: $bm-l;
+        padding: $bm-l;
+        text-transform: uppercase;
+        width: 100%;
+
+        @include media($tablet) {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            float: left;
+            margin-top: 0;
+            padding: $bm-l 0;
+            width: 33.3%;
+        }
+    }
+
+    .form-group {
+        display: inline-block;
+        float: left;
+        width: 100%;
+
+        @include media($tablet) {
+            width: 66.6%;
+        }
+    }
+}

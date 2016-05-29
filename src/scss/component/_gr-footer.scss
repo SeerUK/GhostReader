@@ -38,17 +38,21 @@
     }
 
     &__brand-logo {
-        img {
-            height: 4rem;
-        }
-
         @include media($tablet) {
             text-align: left;
+        }
+
+        img {
+            height: 4rem;
         }
     }
 
     &__brand-nav {
-        text-align: left;
+        text-align: center;
+
+        @include media($tablet) {
+            text-align: left;
+        }
 
         ul {
             margin: 0;

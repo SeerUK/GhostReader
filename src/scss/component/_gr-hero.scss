@@ -1,0 +1,83 @@
+.gr-hero {
+    background-size: cover;
+    padding: ($bm-xxxl * 3) 0 ($bm-xxxl * 1.5);
+    position: relative;
+    text-align: center;
+
+    @include media($tablet) {
+        padding: ($bm-xxxl * 4) 0 ($bm-xxxl * 2);
+    }
+
+    a {
+        color: inherit;
+    }
+
+    &__cover,
+    &__overlay {
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__overlay {
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    &__article {
+        @include outer-container();
+
+        position: relative;
+        z-index: 99;
+    }
+
+    &__tags {
+        font-size: 0.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 400;
+        margin: $bm-l auto;
+        text-transform: uppercase;
+        width: 90%;
+
+        @include media($tablet) {
+            @include shift(2);
+            @include span-columns(8);
+            @include omega();
+
+            font-size: 3rem;
+        }
+    }
+
+    &__author {
+        @include span-columns(12);
+        @include omega();
+
+        font-size: 0.75rem;
+        font-weight: 400;
+        line-height: 1;
+        text-transform: uppercase;
+
+        a {
+            font-weight: 600;
+        }
+
+        &-image {
+            img {
+                height: 4rem;
+                width: auto;
+                border-radius: 50%;
+            }
+        }
+
+        &-name {
+            margin-top: $bm-l;
+        }
+    }
+}

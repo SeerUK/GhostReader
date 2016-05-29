@@ -1,13 +1,31 @@
+$white: #FFFFFF;
+$smoke-light: #F6F7FB;
+$smoke-dark: #E6E9EE;
+$grey-light: #CCD0D9;
+$grey-dark: #AAB2BD;
+$char-light: #656D78;
+$char-dark: #434A54;
+$red-light: #FA7759;
+$red-dark: #E16B50;
+$yellow-light: #FCCE55;
+$yellow-dark: #E5B94C;
+$blue-light: #64A3FC;
+$blue-dark: #5A92E2;
+$green-light: #56F9D9;
+$green-dark: #4DE0C3;
+
 // Colour Palette
-$color-brand-foreground: #F26F5A;
-$color-primary-foreground: #434a54;
-$color-primary-background: #FFFFFF;
-$color-primary-outline: #E0E0E0;
-$color-secondary-foreground: #AAB2BD;
-$color-secondary-background: #FAFBFC;
+$color-brand-foreground: $red-light;
+$color-primary-foreground: $char-dark;
+$color-primary-background: $white;
+$color-primary-outline: $smoke-dark;
+$color-secondary-foreground: $grey-dark;
+$color-secondary-background: $white;
 
 // Font Settings
 $font-family-primary: "Montserrat", sans-serif;
+$font-family-secondary: "Open Sans", sans-serif;
+$font-family-mono: "Inconsolata", monospace;
 $font-size-primary: 16px;
 
 // Box Model Sizing
@@ -19,3 +37,4 @@ $bm-l: 1rem;
 $bm-xl: 1.5rem;
 $bm-xxl: 2rem;
 $bm-xxxl: 3rem;
+$bm-xxxxl: 4rem;

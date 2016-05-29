@@ -1,53 +1,80 @@
 {{!< default}}
 
 {{#post}}
-    <header {{#if image}}style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-        <h1>{{title}}</h1>
+    <nav class="gr-nav gr-nav--hover">
+        <a href="{{@blog.url}}">
+            <img class="gr-nav__logo" src="{{@blog.logo}}" alt="{{@blog.title}}">
+            <span class="gr-nav__name">{{@blog.title}}</span>
+        </a>
+    </nav>
 
-        <section>
-            <time datetime="{{date format="YYYY-MM-DD"}}">
-                {{date format="DD MMMM YYYY"}}
-            </time>
-            {{tags prefix=" in "}}
-        </section>
-    </header>
+    <header class="gr-hero{{#if image}} gr-hero--cover{{/if}}">
+        {{#if image}}
+            <div class="gr-hero__cover" style="background-image: url({{image}})"></div>
+            <div class="gr-hero__overlay"></div>
+        {{/if}}
 
-    <main role="main">
-        <article class="{{post_class}}">
-            <section>
-                {{content}}
-            </section>
+        <section class="gr-hero__article">
+            <div class="gr-hero__tags">{{tags}}</div>
 
-            <footer>
+            <h1 class="gr-hero__title">{{title}}</h1>
+
+            <section class="gr-hero__author">
                 {{#author}}
-                    {{#if image}}
-                        <figure>
+                    <figure class="gr-hero__author-image">
+                        {{#if image}}
                             <a href="{{url}}">
                                 <img src="{{image}}" alt="{{name}}'s Picture" title="{{name}}'s Picture">
                             </a>
-                        </figure>
-                    {{/if}}
-
-                    <section class="author">
-                        <h4><a href="{{url}}">{{name}}</a></h4>
-
-                        {{#if bio}}
-                            <p>{{bio}}</p>
                         {{/if}}
 
-                        <div>
-                            {{#if location}}
-                                <span>{{location}}</span>
-                            {{/if}}
-
-                            {{#if website}}
-                                <span><a href="{{website}}">{{website}}</a></span>
-                            {{/if}}
+                        <div class="gr-hero__author-name">
+                            by <a href="{{url}}">{{name}}</a>
                         </div>
-                    </section>
+                    </figure>
                 {{/author}}
-            </footer>
+
+                <time datetime="{{date format="YYYY-MM-DD"}}">
+                    on {{date format="DD MMMM, YYYY"}}
+                </time>
+            </section>
+        </section>
+    </header>
+
+    <main class="gr-content" role="main">
+        <article class="gr-content__article {{post_class}}">
+            {{content}}
         </article>
+
+        <footer class="gr-content__author">
+            {{#author}}
+                <figure class="gr-content__author-image">
+                    {{#if image}}
+                        <a href="{{url}}">
+                            <img src="{{image}}" alt="{{name}}'s Picture" title="{{name}}'s Picture">
+                        </a>
+                    {{/if}}
+                </figure>
+
+                <section class="gr-content__author-info">
+                    <h4 class="gr-content__author-info-name">
+                        <a href="{{url}}">{{name}}</a>
+                        {{#if location}}
+                            - {{location}}
+                        {{/if}}
+                    </h4>
+
+                    {{#if bio}}
+                        <p class="gr-content__author-info-bio">
+                            {{bio}}
+                            {{#if website}}
+                                <a href="{{website}}">{{website}}</a>
+                            {{/if}}
+                        </p>
+                    {{/if}}
+                </section>
+            {{/author}}
+        </footer>
     </main>
 
     {{!-- Links to Previous/Next posts --}}
@@ -70,4 +97,13 @@
             </a>
         {{/prev_post}}
     </aside>
+
+    {{#if @labs.subscribers}}
+        <section class="gr-subscribe" style="background-image: url({{asset "img/gr-subscribe.jpg"}})">
+            <div class="gr-subscribe__form">
+                <h3 class="gr-subscribe__title">Subscribe and get updates</h3>
+                {{subscribe_form placeholder="Your Email Address"}}
+            </div>
+        </section>
+    {{/if}}
 {{/post}}

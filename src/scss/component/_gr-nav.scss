@@ -1,0 +1,39 @@
+.gr-nav {
+    padding: $bm-xxxl;
+    width: 100%;
+
+    a {
+        color: inherit;
+    }
+
+    &__logo {
+        display: block;
+        height: 3rem;
+        margin: auto;
+        width: auto;
+        text-align: center;
+
+        @include media($tablet) {
+            float: left;
+        }
+    }
+
+    &__name {
+        display: none;
+        float: left;
+        font-family: $font-family-secondary;
+        font-weight: 400;
+        height: 3rem;
+        line-height: 3rem;
+        padding-left: $bm-l;
+
+        @include media($tablet) {
+            display: inline-block;
+        }
+    }
+
+    &--hover {
+        position: absolute;
+        z-index: 100;
+    }
+}
