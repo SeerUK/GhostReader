@@ -1,0 +1,25 @@
+.gr-read-next {
+    @include clearfix;
+
+    display: flex;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+
+    &__next,
+    &__prev {
+        display: block;
+        border-top: 1px solid $color-primary-outline;
+        float: left;
+        padding: $bm-xxl;
+        width: 100%;
+    }
+
+    &__next {
+        border-left: 1px solid $color-primary-outline;
+        text-align: right;
+    }
+
+    &__label {
+        color: $color-secondary-foreground;
+    }
+}

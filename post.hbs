@@ -77,25 +77,20 @@
         </footer>
     </main>
 
-    {{!-- Links to Previous/Next posts --}}
-    <aside>
-        {{#next_post}}
-            <a {{#if image}}style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-                <section>
-                    <h2>{{title}}</h2>
-                    <p>{{excerpt words="19"}}&hellip;</p>
-                </section>
-            </a>
-        {{/next_post}}
-
+    <aside class="gr-read-next">
         {{#prev_post}}
-            <a {{#if image}}style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-                <section>
-                    <h2>{{title}}</h2>
-                    <p>{{excerpt words="19"}}&hellip;</p>
-                </section>
+            <a class="gr-read-next__prev" href="{{url}}">
+                <div class="gr-read-next__label">Previous</div>
+                <div class="gr-read-next__title">{{title}}</div>
             </a>
         {{/prev_post}}
+
+        {{#next_post}}
+            <a class="gr-read-next__next" href="{{url}}">
+                <div class="gr-read-next__label">Next</div>
+                <div class="gr-read-next__title">{{title}}</div>
+            </a>
+        {{/next_post}}
     </aside>
 
     {{#if @labs.subscribers}}
