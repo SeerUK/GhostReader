@@ -7,7 +7,8 @@
         padding: $bm-xxxl 0;
     }
 
-    &__article {
+    &__page,
+    &__post {
         @include shift(1);
         @include span-columns(10);
 

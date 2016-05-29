@@ -1,12 +1,21 @@
 {{!< default}}
 
 {{#post}}
-    <header {{#if image}}style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-        <h1>{{title}}</h1>
+    <nav class="gr-nav gr-nav--hover">
+        <a href="{{@blog.url}}">
+            <img class="gr-nav__logo" src="{{@blog.logo}}" alt="{{@blog.title}}">
+            <span class="gr-nav__name">{{@blog.title}}</span>
+        </a>
+    </nav>
+
+    <header class="gr-hero">
+        <section class="gr-hero__page">
+            <h1 class="gr-hero__title">{{title}}</h1>
+        </section>
     </header>
 
-    <main role="main">
-        <article class="{{post_class}}">
+    <main class="gr-content" role="main">
+        <article class="gr-content__post {{post_class}}">
             <section>
                 {{content}}
             </section>
