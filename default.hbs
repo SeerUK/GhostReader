@@ -21,6 +21,15 @@
 <body class="{{body_class}}">
     {{{body}}}
 
+    {{#if @labs.subscribers}}
+        <section class="gr-subscribe" style="background-image: url({{asset "img/gr-subscribe.jpg"}})">
+            <div class="gr-subscribe__form">
+                <h3 class="gr-subscribe__title">Subscribe and get updates</h3>
+                {{subscribe_form placeholder="Your Email Address"}}
+            </div>
+        </section>
+    {{/if}}
+
     <footer class="gr-footer">
         <section class="gr-footer__brand">
             <div class="gr-footer__brand-logo">

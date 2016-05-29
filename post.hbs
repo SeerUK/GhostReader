@@ -78,27 +78,18 @@
     </main>
 
     <aside class="gr-read-next">
-        {{#prev_post}}
-            <a class="gr-read-next__prev" href="{{url}}">
-                <div class="gr-read-next__label">Previous</div>
-                <div class="gr-read-next__title">{{title}}</div>
-            </a>
-        {{/prev_post}}
-
         {{#next_post}}
             <a class="gr-read-next__next" href="{{url}}">
                 <div class="gr-read-next__label">Next</div>
                 <div class="gr-read-next__title">{{title}}</div>
             </a>
         {{/next_post}}
-    </aside>
 
-    {{#if @labs.subscribers}}
-        <section class="gr-subscribe" style="background-image: url({{asset "img/gr-subscribe.jpg"}})">
-            <div class="gr-subscribe__form">
-                <h3 class="gr-subscribe__title">Subscribe and get updates</h3>
-                {{subscribe_form placeholder="Your Email Address"}}
-            </div>
-        </section>
-    {{/if}}
+        {{#prev_post}}
+            <a class="gr-read-next__prev" href="{{url}}">
+                <div class="gr-read-next__label">Previous</div>
+                <div class="gr-read-next__title">{{title}}</div>
+            </a>
+        {{/prev_post}}
+    </aside>
 {{/post}}
