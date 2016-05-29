@@ -1,4 +1,6 @@
 .gr-nav {
+    @include clearfix;
+
     padding: $bm-xxxl;
     width: 100%;
 
