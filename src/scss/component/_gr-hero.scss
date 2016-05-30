@@ -77,6 +77,21 @@
         }
     }
 
+    &__text {
+        font-family: $font-family-secondary;
+        padding: 0 $bm-xxl;
+        font-size: 1rem;
+        text-align: center;
+
+        @include media($tablet) {
+            @include shift(2);
+            @include span-columns(8);
+
+            font-size: 1.125rem;
+            padding: 0;
+        }
+    }
+
     &__author {
         @include span-columns(12);
         @include omega();
