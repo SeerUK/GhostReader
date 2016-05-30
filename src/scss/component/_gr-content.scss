@@ -146,18 +146,43 @@
         }
 
         &-name {
-            display: inline;
+            display: block;
             font-weight: normal;
             margin: 0 0 $bm-l;
+            text-align: center;
             text-transform: uppercase;
+
+            @include media($tablet) {
+                display: inline;
+                text-align: left;
+            }
         }
 
         &-meta {
             color: $color-secondary-foreground;
+            display: block;
+            text-align: center;
             text-transform: uppercase;
 
-            &::before {
-                content: "- ";
+            &::after {
+                content: ", ";
+            }
+
+            &:last-of-type::after {
+                content: "";
+            }
+
+            @include media($tablet) {
+                display: inline;
+                text-align: left;
+
+                &::before {
+                    content: " - ";
+                }
+
+                &::after {
+                    content: "";
+                }
             }
 
             a {
