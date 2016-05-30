@@ -18,6 +18,10 @@
 
     a {
         color: inherit;
+
+        &:hover {
+            color: $color-brand-foreground;
+        }
     }
 
     &__cover,
@@ -103,6 +107,10 @@
 
         a {
             font-weight: 600;
+
+            &:hover {
+                color: $color-brand-foreground;
+            }
         }
 
         &-image {

@@ -194,6 +194,10 @@
 
             a {
                 color: inherit;
+
+                &:hover {
+                    color: $color-brand-foreground;
+                }
             }
         }
 
