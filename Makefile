@@ -5,6 +5,7 @@ build_assets: install_npm_dependencies
 
 clean:
 	rm -rf ./assets/css/*
+	rm -rf ./assets/js/*
 
 install: install_npm_dependencies
 
