@@ -1,4 +1,4 @@
-build: build_assets build_flats build_web
+build: build_assets
 
 build_assets: install_npm_dependencies
 	gulp build
