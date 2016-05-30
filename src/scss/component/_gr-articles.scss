@@ -6,13 +6,14 @@
         position: relative;
 
         @include media($tablet) {
-            @include shift(1);
-            @include span-columns(10);
+            @include span-columns(6);
+            @include omega(2n);
         }
     }
 
     &__item-post {
-        padding-bottom: $bm-xxxxl;
+        padding: $bm-xxl;
+        margin-bottom: $gutter;
         position: relative;
         text-align: center;
         z-index: 99;
@@ -25,15 +26,13 @@
     }
 
     &__item-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
         line-height: 1.2;
         margin: $bm-l 0;
-        padding: 0 $bm-xxl;
         text-transform: uppercase;
 
         @include media($tablet) {
-            font-size: 3rem;
-            margin: $bm-l $gutter;
+            font-size: 2rem;
             padding: 0;
         }
     }
@@ -51,13 +50,8 @@
 
     &__item-excerpt {
         font-family: $font-family-secondary;
-        font-size: 1.125rem;
+        font-size: 0.875rem;
         line-height: 1.9;
-        padding: 0 $bm-xxl;
         text-align: left;
-
-        @include media($tablet) {
-            padding: 0;
-        }
     }
 }

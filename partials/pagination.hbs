@@ -1,15 +1,15 @@
 <nav class="gr-read-next" role="navigation">
     {{#if prev}}
         <a class="gr-read-next__next" href="{{page_url prev}}">
-            <div class="gr-read-next__label">Previous</div>
-            <div class="gr-read-next__title">Older Posts</div>
+            <div class="gr-read-next__label">Next</div>
+            <div class="gr-read-next__title">Newer Posts</div>
         </a>
     {{/if}}
 
     {{#if next}}
         <a class="gr-read-next__prev" href="{{page_url next}}">
-            <div class="gr-read-next__label">Next</div>
-            <div class="gr-read-next__title">Newer Posts</div>
+            <div class="gr-read-next__label">Previous</div>
+            <div class="gr-read-next__title">Older Posts</div>
         </a>
     {{/if}}
 </nav>

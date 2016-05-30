@@ -1,0 +1,20 @@
+{{!< default}}
+
+{{#tag}}
+    <nav class="gr-nav gr-nav--hover">
+        <a href="{{@blog.url}}">
+            <img class="gr-nav__logo" src="{{@blog.logo}}" alt="{{@blog.title}}">
+            <span class="gr-nav__name">{{@blog.title}}</span>
+        </a>
+    </nav>
+
+    <header class="gr-hero">
+        <section class="gr-hero__page">
+            <h1 class="gr-hero__title">{{name}}</h1>
+        </section>
+    </header>
+{{/tag}}
+
+<main role="main">
+    {{> "loop"}}
+</main>

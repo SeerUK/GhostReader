@@ -71,9 +71,9 @@
         @include media($tablet) {
             @include shift(2);
             @include span-columns(8);
-            @include omega();
 
             font-size: 3rem;
+            padding: 0;
         }
     }
 
@@ -100,6 +100,40 @@
 
         &-name {
             margin-top: $bm-l;
+        }
+
+        &-info {
+            color: $color-secondary-foreground;
+            font-size: 0.75rem;
+            margin-bottom: $bm-l;
+            text-transform: uppercase;
+
+            @include media($tablet) {
+                @include shift(2);
+                @include span-columns(8);
+            }
+
+            span + span {
+                &::before {
+                    content: "| ";
+                }
+            }
+        }
+
+        &-bio {
+            font-family: $font-family-secondary;
+            padding: 0 $bm-xxl;
+            font-size: 1rem;
+            text-align: left;
+
+            @include media($tablet) {
+                @include shift(2);
+                @include span-columns(8);
+
+                font-size: 1.125rem;
+                padding: 0;
+                text-align: center;
+            }
         }
     }
 }

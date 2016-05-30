@@ -1,6 +1,6 @@
 {{!< default}}
 
-<nav class="gr-nav">
+<nav class="gr-nav gr-nav--hover">
     <a href="{{@blog.url}}">
         <img class="gr-nav__logo" src="{{@blog.logo}}" alt="{{@blog.title}}">
         <span class="gr-nav__name">{{@blog.title}}</span>
@@ -8,37 +8,27 @@
 </nav>
 
 {{#author}}
-    <section>
-        {{#if image}}
-            <figure>
-                <a href="{{url}}">
-                    <img src="{{image}}" alt="{{name}}'s Picture" title="{{name}}'s Picture">
-                </a>
-            </figure>
-        {{/if}}
+    <header class="gr-hero">
+        <section class="gr-hero__page">
+            <div class="gr-hero__tags">Articles By</div>
 
-        <div>
-            <h4><a href="{{url}}">{{name}}</a></h4>
+            <h1 class="gr-hero__title">{{name}}</h1>
 
-            {{#if bio}}
-                <p>{{bio}}</p>
-            {{/if}}
-
-            <div>
+            <div class="gr-hero__author-info">
                 {{#if location}}
-                    <span>{{location}}</span>
+                    <span>from {{location}}</span>
                 {{/if}}
 
                 {{#if website}}
-                    <span><a href="{{website}}">{{website}}</a></span>
+                    <span><a href="{{website}}" target="_blank" rel="noreferrer">Website</a></span>
                 {{/if}}
             </div>
 
-            <div>
-                {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
+            <div class="gr-hero__author-bio">
+                {{bio}}
             </div>
-        </div>
-    </section>
+        </section>
+    </header>
 {{/author}}
 
 <main role="main">
