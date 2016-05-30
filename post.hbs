@@ -59,17 +59,20 @@
                 <section class="gr-content__author-info">
                     <h4 class="gr-content__author-info-name">
                         <a href="{{url}}">{{name}}</a>
-                        {{#if location}}
-                            - {{location}}
-                        {{/if}}
                     </h4>
+
+                    {{#if location}}
+                        <span class="gr-content__author-info-meta">from {{location}}</span>
+                    {{/if}}
+                    {{#if website}}
+                        <span class="gr-content__author-info-meta">
+                            <a href="{{website}}">Website</a>
+                        </span>
+                    {{/if}}
 
                     {{#if bio}}
                         <p class="gr-content__author-info-bio">
                             {{bio}}
-                            {{#if website}}
-                                <a href="{{website}}">{{website}}</a>
-                            {{/if}}
                         </p>
                     {{/if}}
                 </section>

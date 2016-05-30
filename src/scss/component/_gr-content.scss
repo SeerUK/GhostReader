@@ -137,6 +137,7 @@
     &__author-info {
         @include span-columns(12);
 
+        font-family: $font-family-primary;
         text-align: left;
 
         @include media($tablet) {
@@ -145,8 +146,27 @@
         }
 
         &-name {
-            font-weight: 600;
+            display: inline;
+            font-weight: normal;
             margin: 0 0 $bm-l;
+            text-transform: uppercase;
+        }
+
+        &-meta {
+            color: $color-secondary-foreground;
+            text-transform: uppercase;
+
+            &::before {
+                content: "- ";
+            }
+
+            a {
+                color: inherit;
+            }
+        }
+
+        &-bio {
+            font-family: $font-family-secondary;
         }
     }
 }
