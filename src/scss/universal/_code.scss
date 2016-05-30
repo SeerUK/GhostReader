@@ -16,8 +16,16 @@ $hue-6-2: hsl(41, 99%, 38%);
         color: $hue-6;
     }
 
+    &.builtin {
+        color: $hue-6-2;
+    }
+
     &.class-name {
         color: $hue-6-2;
+    }
+
+    &.comment {
+        color: $mono-3;
     }
 
     &.function {
