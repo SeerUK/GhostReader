@@ -1,31 +1,38 @@
-{{#foreach posts}}
-    <article class="gr-content {{post_class}}">
-        <header>
-            <h2>
-                <a href="{{url}}">{{title}}</a>
-            </h2>
-        </header>
+<section class="gr-articles">
+    {{#foreach posts}}
+        <article class="gr-articles__item {{post_class}}">
+            <section class="gr-articles__item-post">
+                <div class="gr-articles__item-tags">{{tags}}</div>
 
-        <section>
-            <p>
-                {{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a>
-            </p>
-        </section>
+                <header class="gr-articles__item-title">
+                    <a href="{{url}}">{{title}}</a>
+                </header>
 
-        <footer>
-            {{#if author.image}}
-                <img src="{{author.image}}" alt="{{author.name}}">
-            {{/if}}
+                <section class="gr-articles__item-author">
+                    {{#author}}
+                        by <a href="{{url}}"><strong>{{name}}</strong></a>
+                    {{/author}}
+                    on {{date format="DD MMMM, YYYY"}}
+                </section>
 
-            {{author}}
+                <section class="gr-articles__item-excerpt">
+                    {{excerpt characters="240"}}&hellip;
+                </section>
 
-            {{tags prefix=" in "}}
+                <!--<footer>-->
+                    <!--{{#if author.image}}-->
+                        <!--<img src="{{author.image}}" alt="{{author.name}}">-->
+                    <!--{{/if}}-->
 
-            <time datetime="{{date format="YYYY-MM-DD"}}">
-                {{date format="DD MMMM YYYY"}}
-            </time>
-        </footer>
-    </article>
-{{/foreach}}
+                    <!--{{author.name}}-->
+
+                    <!--<time datetime="{{date format="YYYY-MM-DD"}}">-->
+                        <!--{{date format="DD MMMM YYYY"}}-->
+                    <!--</time>-->
+                <!--</footer>-->
+            </section>
+        </article>
+    {{/foreach}}
+</section>
 
 {{pagination}}

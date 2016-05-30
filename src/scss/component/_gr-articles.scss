@@ -1,0 +1,63 @@
+.gr-articles {
+    @include outer-container();
+
+    &__item {
+        margin-bottom: $gutter;
+        position: relative;
+
+        @include media($tablet) {
+            @include shift(1);
+            @include span-columns(10);
+        }
+    }
+
+    &__item-post {
+        padding-bottom: $bm-xxxxl;
+        position: relative;
+        text-align: center;
+        z-index: 99;
+    }
+
+    &__item-tags {
+        font-size: 0.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    &__item-title {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin: $bm-l 0;
+        padding: 0 $bm-xxl;
+        text-transform: uppercase;
+
+        @include media($tablet) {
+            font-size: 3rem;
+            margin: $bm-l $gutter;
+            padding: 0;
+        }
+    }
+
+    &__item-author {
+        color: $color-secondary-foreground;
+        font-size: 0.75rem;
+        margin-bottom: $bm-l;
+        text-transform: uppercase;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    &__item-excerpt {
+        font-family: $font-family-secondary;
+        font-size: 1.125rem;
+        line-height: 1.9;
+        padding: 0 $bm-xxl;
+        text-align: left;
+
+        @include media($tablet) {
+            padding: 0;
+        }
+    }
+}

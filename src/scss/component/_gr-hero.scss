@@ -34,6 +34,18 @@
         background: rgba(255, 255, 255, 0.8);
     }
 
+    &__description {
+        text-align: left;
+        white-space: pre-line;
+        width: 90%;
+
+        &-text {
+            font-size: 3rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+
     &__page,
     &__post {
         @include outer-container();
@@ -51,9 +63,10 @@
     &__title {
         font-size: 2rem;
         font-weight: 400;
-        margin: $bm-l auto;
+        line-height: 1.2;
+        margin: $bm-l 0;
+        padding: 0 $bm-xxl;
         text-transform: uppercase;
-        width: 90%;
 
         @include media($tablet) {
             @include shift(2);
