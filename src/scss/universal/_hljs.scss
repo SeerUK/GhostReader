@@ -1,0 +1,58 @@
+$mono-1: hsl(230, 8%, 24%);
+$mono-2: hsl(230, 6%, 44%);
+$mono-3: hsl(230, 4%, 64%);
+$hue-1: hsl(198, 99%, 37%);
+$hue-2: hsl(221, 87%, 60%);
+$hue-3: hsl(301, 63%, 40%);
+$hue-4: hsl(119, 34%, 47%);
+$hue-5: hsl(5, 74%, 59%);
+$hue-5-2: hsl(344, 84%, 43%);
+$hue-6: hsl(41, 99%, 30%);
+$hue-6-2: hsl(41, 99%, 38%);
+
+.hljs {
+    color: $color-primary-foreground;
+}
+
+.hljs-comment {
+    color: $mono-3;
+    font-style: italic;
+}
+
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp {
+    color: $hue-5;
+}
+
+.hljs-number,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-constant {
+    color: $hue-6;
+}
+
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.hljs-name {
+    color: $hue-4;
+}
+
+.hljs-title {
+    color: $hue-6-2;
+}
+
+.hljs-function {
+    .hljs-title {
+        color: $hue-2;
+    }
+}
+
+.hljs-keyword,
+.javascript .hljs-function {
+    color: $hue-3;
+}
